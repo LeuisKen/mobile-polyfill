@@ -5,14 +5,14 @@
  */
 
 // 双指放大
-document.documentElement.addEventListener('touchstart', function (e) {
+document.addEventListener('touchstart', function (e) {
     if (event.scale !== 1) {
         e.preventDefault();
     }
 }, false);
 
 // 双击屏幕
-document.documentElement.addEventListener('touchend', (function () {
+document.addEventListener('touchend', (function () {
     let lastTouchEnd = 0;
     return function (e) {
         const now = Date.now();
